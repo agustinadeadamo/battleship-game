@@ -1,9 +1,18 @@
+/**
+ * @desc Dependencies
+ */
 import React from 'react';
+import { Provider } from 'react-redux';
+
+/**
+ * @desc Store
+ */
+import Store from './Config/Store';
 
 const App = () => (
-  <div>
+  <Provider store={Store}>
     Battleship
-  </div>
+  </Provider>
 );
 
 export default App;
