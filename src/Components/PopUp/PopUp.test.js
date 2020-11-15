@@ -21,11 +21,7 @@ const grid = [{
   cellContent: 'sea',
 }]
 
-const customRender = (ui, options) =>
-  render(ui, { wrapper: AllTheProviders, ...options })
-
-
-describe('[Grid Component]',() => {
+describe('[PopUp Component]',() => {
 
   it('Renders correctly', () => {
     const {queryByTestId} = render(<PopUp copy="test" show={true} hidePopUp={() => {}}/>);
