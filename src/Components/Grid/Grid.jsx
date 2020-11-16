@@ -24,18 +24,18 @@ const Grid = (props) => {
     <div>
       <GridComponent data-testid="grid-component" gridName={gridName} className={`grid-${gridName}`}>
         <div className="content">
-        {
-          grid && grid.map((cell) => (
-            <div
-              key={cell.id}
-              role="presentation"
-              onClick={() => enableGrid && onClickCell(cell)}
-              id={cell.id}
-              className={`cell ${cell.status}`}
-              data-testid="cell-component"
-            />
-          ))
-        }
+          {
+            grid && grid.map((cell) => (
+              <div
+                key={cell.id}
+                role="presentation"
+                onClick={() => enableGrid && onClickCell(cell)}
+                id={cell.id}
+                className={`cell ${cell.status}`}
+                data-testid="cell-component"
+              />
+            ))
+          }
         </div>
       </GridComponent>
     </div>
