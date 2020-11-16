@@ -7,9 +7,12 @@
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
     "eslint-config-airbnb": "^18.2.1",
+    "jest-styled-components": "^7.0.3",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
@@ -42,7 +45,9 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "react-test-renderer": "^17.0.1"
+  },
   "author": "Agustina De Adamo",
   "license": "ISC",
   "keywords": [
