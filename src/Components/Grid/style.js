@@ -45,7 +45,7 @@ export const GridComponent = styled.div`
     }
 
     .taken {
-      background-color: ${Colors.taken};
+      background-color: ${Colors.grey};
     }
   }
 
