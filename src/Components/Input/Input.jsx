@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * @desc Styles
  */
-import InputComponent from './style';
+import { InputComponent, MessageError } from './style';
 
 const Input = (props) => {
   // Destructuring props
@@ -17,6 +17,8 @@ const Input = (props) => {
     placeholder,
     type,
     onChangeValue,
+    messageError,
+    showMessageError,
   } = props;
 
   /**
@@ -29,14 +31,26 @@ const Input = (props) => {
   };
 
   return (
-    <InputComponent
-      onChange={(event) => handleChange(event)}
-      value={value}
-      maxLength={maxLength}
-      type={type}
-      placeholder={placeholder}
-      data-testid="input-component"
-    />
+    <>
+      <InputComponent
+        onChange={(event) => handleChange(event)}
+        value={value}
+        maxLength={maxLength}
+        type={type}
+        placeholder={placeholder}
+        data-testid="input-component"
+      />
+      {
+        showMessageError && (
+          <MessageError
+            data-testid="message-error"
+            className="test"
+          >
+            {messageError}
+          </MessageError>
+        )
+      }
+    </>
   );
 };
 
@@ -46,12 +60,16 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   onChangeValue: PropTypes.func.isRequired,
+  messageError: PropTypes.string,
+  showMessageError: PropTypes.bool,
 };
 
 Input.defaultProps = {
   maxLength: 100,
   placeholder: '',
   type: 'text',
+  messageError: '',
+  showMessageError: false,
 };
 
 export default Input;
