@@ -10,6 +10,11 @@ import { Provider } from 'react-redux';
 import Store from './Config/Store';
 
 /**
+ * @desc Configs
+ */
+import Routes from './Config/Routes';
+
+/**
  * @desc Styled Components
  */
 import GlobalStyle from './MainStyles/GlobalStyle';
@@ -18,7 +23,7 @@ const App = () => (
   <>
     <GlobalStyle />
     <Provider store={Store}>
-      Battleship
+      <Routes />
     </Provider>
   </>
 );
