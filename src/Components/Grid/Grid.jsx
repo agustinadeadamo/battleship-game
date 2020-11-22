@@ -22,7 +22,12 @@ const Grid = (props) => {
 
   return (
     <div>
-      <GridComponent data-testid="grid-component" gridName={gridName} className={`grid-${gridName}`}>
+      <GridComponent
+        enableGrid={enableGrid}
+        data-testid="grid-component"
+        gridName={gridName}
+        className={`grid-${gridName}`}
+      >
         <div className="content">
           {
             grid && grid.map((cell) => (
@@ -44,13 +49,15 @@ const Grid = (props) => {
 
 Grid.propTypes = {
   gridName: PropTypes.string.isRequired,
-  onClickCell: PropTypes.func.isRequired,
+  onClickCell: PropTypes.func,
   enableGrid: PropTypes.bool,
-  grid: PropTypes.arrayOf(PropTypes.object).isRequired,
+  grid: PropTypes.arrayOf(PropTypes.object),
 };
 
 Grid.defaultProps = {
   enableGrid: false,
+  onClickCell: () => {},
+  grid: [],
 };
 
 export default Grid;

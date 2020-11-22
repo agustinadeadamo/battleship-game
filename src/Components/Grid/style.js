@@ -52,7 +52,7 @@ export const GridComponent = styled.div`
   .cell {
     width: 10%;
     height: 10%;
-    cursor: pointer;
+    ${(props) => props.enableGrid && 'cursor: pointer;'}
 
     &.empty {
       border: 2px solid ${Colors.grey};

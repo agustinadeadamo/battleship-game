@@ -29,7 +29,16 @@ describe('[Grid Component]',() => {
     expect(input).toMatchSnapshot();
   });
 
-  it("Should call prop function onClickCell", () => {
+  it("Should return correct number of cells", () => {
+    const onClickCell = jest.fn();
+    const { getAllByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
+    // Gets all cells
+    const cells = getAllByTestId("cell-component");
+    expect(cells).toHaveLength(grid.length);
+
+  });
+
+  it("Should call prop function onClickCell with right arguments", () => {
     const onClickCell = jest.fn();
     const { getByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
     // Gets cell item
@@ -41,6 +50,8 @@ describe('[Grid Component]',() => {
     });
 
     expect(onClickCell).toHaveBeenCalled();
+    expect(onClickCell).toHaveBeenCalledWith(grid[0]);
+
   });
 
 })
