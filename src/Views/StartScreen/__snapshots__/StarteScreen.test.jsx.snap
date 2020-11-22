@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[StartScreen View] Matchs snapshot 1`] = `
+<div
+  className="sc-hKgILt gQQIrd"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      Battleship
+    </h1>
+    <h3>
+      Configuration
+    </h3>
+  </div>
+  <div
+    className="instructions"
+  >
+    <ul>
+      <li>
+        Enter your user name.
+      </li>
+      <li>
+        Place you ships on the board the way you prefer.
+      </li>
+      <li>
+        Start the game !
+      </li>
+    </ul>
+  </div>
+  <div
+    className="configuration"
+  >
+    <div
+      className="first-column"
+    >
+      <div
+        className="grid-container"
+        data-testid="grid-container"
+      >
+        <div>
+          <div
+            className="sc-dlfnbm flhENT grid-user"
+            data-testid="grid-component"
+          >
+            <div
+              className="content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="second-column"
+      data-testid="actions-container"
+    >
+      <div
+        className="actions"
+      >
+        <input
+          className="sc-bdfBwQ eQQpZx"
+          data-testid="input-component"
+          maxLength={100}
+          onChange={[Function]}
+          placeholder="Insert user name here"
+          type="text"
+          value=""
+        />
+        <div
+          className="buttons-container"
+        >
+          <button
+            data-testid="change-positions-button"
+            onClick={[Function]}
+            type="button"
+          >
+             Change position 
+          </button>
+          <button
+            className="dark"
+            data-testid="start-game"
+            onClick={[Function]}
+            type="button"
+          >
+            Start Game
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
