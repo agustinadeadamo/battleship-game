@@ -37,7 +37,7 @@ const Grid = (props) => {
                 onClick={() => enableGrid && onClickCell(cell)}
                 id={cell.id}
                 className={`cell ${cell.status}`}
-                data-testid="cell-component"
+                data-testid={`cell-component ${cell.cellContent}`}
               />
             ))
           }

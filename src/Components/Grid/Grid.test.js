@@ -33,7 +33,7 @@ describe('[Grid Component]',() => {
     const onClickCell = jest.fn();
     const { getAllByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
     // Gets all cells
-    const cells = getAllByTestId("cell-component");
+    const cells = getAllByTestId(/cell-component/);
     expect(cells).toHaveLength(grid.length);
 
   });
@@ -42,7 +42,7 @@ describe('[Grid Component]',() => {
     const onClickCell = jest.fn();
     const { getByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
     // Gets cell item
-    const cell = getByTestId("cell-component");
+    const cell = getByTestId(/cell-component/);
 
     // Fires onClick event in cell item
     act(() => {
