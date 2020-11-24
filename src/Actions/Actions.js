@@ -5,6 +5,7 @@ export const UPDATE_USER_GRID = 'UPDATE_USER_GRID';
 export const UPDATE_COMPUTER_GRID = 'UPDATE_COMPUTER_GRID';
 export const UPDATE_USER_NAME = 'UPDATE_USER_NAME';
 export const UPDATE_GAME_STARTED = 'UPDATE_GAME_STARTED';
+export const UPDATE_WINNER = 'UPDATE_WINNER';
 
 /**
  * @desc Updates user name
@@ -51,5 +52,17 @@ export const updateComputerGridInReducer = (payload) => ({
  */
 export const updateGameStarted = (payload) => ({
   type: UPDATE_GAME_STARTED,
+  payload,
+});
+
+/**
+ * @desc Updates winner name
+ *
+ * @param { Boolean } payload
+ *
+ * @return { Object }
+ */
+export const updateWinner = (payload) => ({
+  type: UPDATE_WINNER,
   payload,
 });

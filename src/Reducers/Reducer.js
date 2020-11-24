@@ -6,6 +6,7 @@ import {
   UPDATE_COMPUTER_GRID,
   UPDATE_USER_NAME,
   UPDATE_GAME_STARTED,
+  UPDATE_WINNER,
 } from '../Actions/Actions';
 
 /**
@@ -18,6 +19,7 @@ const InitialState = {
   gridHeight: 10,
   userGrid: [],
   computerGrid: [],
+  winner: '',
   ships: [
     {
       name: 'carrier',
@@ -119,7 +121,13 @@ const Reducer = (state = InitialState, action) => {
       return {
         ...state,
         gameStarted: action.payload,
-      }
+      };
+
+    case UPDATE_WINNER:
+      return {
+        ...state,
+        winner: action.payload,
+      };
     default:
       return state;
   }
