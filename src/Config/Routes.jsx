@@ -14,12 +14,14 @@ import PrivateRoute from '../Components/PrivateRoute/PrivateRoute';
  */
 import StartScreen from '../Views/StartScreen/StartScreen';
 import GameScreen from '../Views/GameScreen/GameScreen';
+import EndGameScreen from '../Views/EndGameScreen/EndGameScreen';
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={StartScreen} />
       <PrivateRoute exact path="/game" component={GameScreen} />
+      <PrivateRoute exact path="/end" component={EndGameScreen} />
     </Switch>
   </BrowserRouter>
 );
