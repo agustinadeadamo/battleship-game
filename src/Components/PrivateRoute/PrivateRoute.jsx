@@ -15,7 +15,7 @@ const PrivateRoute = (props) => {
   const user = useSelector((state) => state.user);
 
   return (
-    user !== null ? <Route data-testid="private-route" exact path={path} component={component} /> : <Redirect to="/" />
+    user !== null && user !== '' ? <Route data-testid="private-route" exact path={path} component={component} /> : <Redirect to="/" />
   );
 };
 
