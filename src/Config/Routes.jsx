@@ -1,9 +1,8 @@
 /**
  * @desc Dependencies
  */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 /**
  * @desc Components
@@ -14,27 +13,15 @@ import PrivateRoute from '../Components/PrivateRoute/PrivateRoute';
  * @desc Views
  */
 import StartScreen from '../Views/StartScreen/StartScreen';
+import GameScreen from '../Views/GameScreen/GameScreen';
 
-const Routes = () => {
-  const [authenticated, changeAuthenticated] = useState(false);
-  const user = useSelector((state) => state.user);
-
-  useEffect(() => {
-    console.log('ENTRAAAAAAAAAAAA');
-    // Validate user Exists
-    if (user !== null && user !== '') {
-      changeAuthenticated(true);
-    }
-  }, []);
-
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={StartScreen} />
-        <PrivateRoute user={user} authenticated={authenticated} exact path="/game" component={StartScreen} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+const Routes = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={StartScreen} />
+      <PrivateRoute exact path="/game" component={GameScreen} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Routes;
