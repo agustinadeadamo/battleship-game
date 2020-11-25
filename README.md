@@ -15,7 +15,7 @@ First clone the project in a file.
 On your console, go to the destination folder and run the following command
 
 ```
-git clone https://github.com/agustinadeadamo/poke-app.git
+git clone https://github.com/agustinadeadamo/battleship-game.git
 ```
 
 ### Install dependencies
