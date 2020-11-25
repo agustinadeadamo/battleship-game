@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[EndGameScreen View] Matchs snapshot 1`] = `
+<div
+  className="sc-bdfBwQ jDcNjQ"
+  data-testid="end-game-container"
+>
+  <div
+    className="winner-container"
+  >
+    <p
+      className="winner"
+    >
+      The winner is:
+    </p>
+    <p
+      className="winner"
+    >
+      
+    </p>
+    <button
+      className="dark button-play-again"
+      data-testid="play-again-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Play again
+    </button>
+  </div>
+</div>
+`;

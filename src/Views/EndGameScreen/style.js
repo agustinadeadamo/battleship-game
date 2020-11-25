@@ -23,6 +23,10 @@ height: 100vh;
       font-size: 30px;
       text-align: center;
     }
+
+    .button-play-again {
+      margin: 30px 0;
+    }
   }
 `;
 
