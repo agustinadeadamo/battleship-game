@@ -1,11 +1,13 @@
 /**
  * @desc Dependencies
  */
-import { create } from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 import React from 'react';
 import { render, fireEvent, within } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import TestRenderer from 'react-test-renderer';
+import {
+  describe, expect, it, beforeEach,
+} from '@jest/globals';
 
 /**
  * @desc Store
@@ -16,8 +18,6 @@ import Store from '../../Config/Store';
  * @desc Component
  */
 import StartScreen from './StartScreen';
-
-const { act } = TestRenderer;
 
 // Mocks react router history
 const mockHistoryPush = jest.fn();

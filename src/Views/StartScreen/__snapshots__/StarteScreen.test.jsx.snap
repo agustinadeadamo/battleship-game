@@ -41,7 +41,7 @@ exports[`[StartScreen View] Matchs snapshot 1`] = `
       >
         <div>
           <div
-            className="sc-dlfnbm flhENT grid-user"
+            className="sc-dlfnbm cdxzLn grid-user"
             data-testid="grid-component"
           >
             <div

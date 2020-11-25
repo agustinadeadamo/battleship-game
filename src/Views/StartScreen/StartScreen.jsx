@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
  * @desc Actions
  */
 import {
-  updateUserGridInReducer, updateComputerGridInReducer, updateUserName, updateGameStarted
+  updateUserGridInReducer, updateComputerGridInReducer, updateUserName, updateGameStarted,
 } from '../../Actions/Actions';
 
 /**
