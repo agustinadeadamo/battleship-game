@@ -2,7 +2,6 @@
  * @desc Dependencies
  */
 import logger from 'redux-logger';
-import thunk from 'redux-thunk';
 
 /**
  * @desc Middlewares
@@ -20,9 +19,6 @@ export default (() => {
     // Logger of redux.
     Middlewares.push(logger);
   }
-
-  // Adds thunk to middlewares
-  Middlewares.push(thunk);
 
   return Middlewares;
 })();

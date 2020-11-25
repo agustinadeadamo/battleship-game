@@ -17,7 +17,7 @@ import GameScreen from '../Views/GameScreen/GameScreen';
 import EndGameScreen from '../Views/EndGameScreen/EndGameScreen';
 
 const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/" component={StartScreen} />
       <PrivateRoute exact path="/game" component={GameScreen} />
