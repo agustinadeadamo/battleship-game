@@ -32,21 +32,27 @@ export const GridComponent = styled.div`
   }
   
   &.grid-user {
-    .hit {
-      background-color: ${Colors.orange};
-    }
-
-    .missed {
-      background-color: ${Colors.lightBlue};
-    }
-
-    .destroyed {
-      background-color: ${Colors.red};
-    }
-
     .taken {
       background-color: ${Colors.grey};
     }
+  }
+
+  &.grid-computer {
+    .taken {
+      border: 2px solid ${Colors.grey};
+    }
+  }
+
+  .hit {
+    background-color: ${Colors.orange};
+  }
+
+  .missed {
+    background-color: ${Colors.lightBlue};
+  }
+
+  .destroyed {
+    background-color: ${Colors.red};
   }
 
   .cell {
