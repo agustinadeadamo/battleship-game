@@ -344,8 +344,8 @@ const StartScreen = () => {
         <PopUp copy={copyPopUp} show={showPopUp} hidePopUp={() => { updateShowPopUp(false); }} />
       </div>
       <div className="title">
-        <h1>Now play!</h1>
-        <h3>BattleShip</h3>
+        <h1>BattleShip</h1>
+        <h3>Now play!</h3>
       </div>
       <div className="player-turn">
         <p>
@@ -363,7 +363,7 @@ const StartScreen = () => {
         <div className="second-column">
           <div data-testid="grid-container-user" className="grid-container">
             <p className="grid-name">{user}</p>
-            <Grid onClickCell={(cell) => onClickCellUser(cell)} data-testid="grid-grid" enableGrid={enableUserGrid} grid={computerGridGame} gridName="user" />
+            <Grid onClickCell={(cell) => onClickCellUser(cell)} data-testid="grid-grid" enableGrid={enableUserGrid} grid={computerGridGame} gridName="computer" />
           </div>
         </div>
       </div>
