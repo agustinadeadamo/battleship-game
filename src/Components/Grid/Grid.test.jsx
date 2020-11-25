@@ -4,6 +4,9 @@
 import { create, act } from 'react-test-renderer';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import {
+  describe, expect, it, jest,
+} from '@jest/globals';
 
 /**
  * @desc Components
@@ -15,32 +18,30 @@ let grid = [{
   status: 'empty',
   taken: false,
   cellContent: 'sea',
-}]
+}];
 
-describe('[Grid Component]',() => {
-
+describe('[Grid Component]', () => {
   it('Renders correctly', () => {
-    const {queryByTestId} = render(<Grid gridName="user"  grid={grid} onClickCell={() => {}}/>);
+    const { queryByTestId } = render(<Grid gridName="user" grid={grid} onClickCell={() => {}}/>);
     expect(queryByTestId('grid-component')).toBeTruthy();
   });
-  
+
   it('Matches snapshot', () => {
-    const input = create(<Grid gridName="user"  grid={grid} onClickCell={() => {}} />).toJSON;
+    const input = create(<Grid gridName="user" grid={grid} onClickCell={() => {}} />).toJSON;
     expect(input).toMatchSnapshot();
   });
 
-  it("Should return correct number of cells", () => {
+  it('Should return correct number of cells', () => {
     const onClickCell = jest.fn();
-    const { getAllByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
+    const { getAllByTestId } = render(<Grid gridName="user" grid={grid} onClickCell={onClickCell} />);
     // Gets all cells
     const cells = getAllByTestId(/cell-component/);
     expect(cells).toHaveLength(grid.length);
-
   });
 
-  it("Should call prop function onClickCell with right arguments", () => {
+  it('Should call prop function onClickCell with right arguments', () => {
     const onClickCell = jest.fn();
-    const { getByTestId } = render(<Grid gridName="user" grid={grid} enableGrid={true}  onClickCell={onClickCell} />);
+    const { getByTestId } = render(<Grid enableGrid gridName="user" grid={grid} onClickCell={onClickCell} />);
     // Gets cell item
     const cell = getByTestId(/cell-component/);
 
@@ -51,7 +52,5 @@ describe('[Grid Component]',() => {
 
     expect(onClickCell).toHaveBeenCalled();
     expect(onClickCell).toHaveBeenCalledWith(grid[0]);
-
   });
-
 })

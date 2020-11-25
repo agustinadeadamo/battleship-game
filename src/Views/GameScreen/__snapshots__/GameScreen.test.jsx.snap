@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[GameScreen View] Matchs snapshot 1`] = `
+<div
+  className="sc-dlfnbm jjBisn"
+>
+  <div
+    data-testid="popUp-container"
+  >
+    <div
+      className="sc-bdfBwQ hWUWEm hide"
+      data-testid="popUp-component"
+    >
+      
+    </div>
+  </div>
+  <div
+    className="title"
+  >
+    <h1>
+      BattleShip
+    </h1>
+    <h3>
+      Now play!
+    </h3>
+  </div>
+  <div
+    className="player-turn"
+  >
+    <p>
+      Player:
+      text
+    </p>
+  </div>
+  <div
+    className="grids-container"
+  >
+    <div
+      className="first-column"
+    >
+      <div
+        className="grid-container"
+        data-testid="grid-container-computer"
+      >
+        <p
+          className="grid-name"
+        >
+          CPU
+        </p>
+        <div>
+          <div
+            className="sc-gsTCUz fzmsNw grid-user"
+            data-testid="grid-component"
+          >
+            <div
+              className="content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="second-column"
+    >
+      <div
+        className="grid-container"
+        data-testid="grid-container-user"
+      >
+        <p
+          className="grid-name"
+        >
+          text
+        </p>
+        <div>
+          <div
+            className="sc-gsTCUz bIPugA grid-computer"
+            data-testid="grid-component"
+          >
+            <div
+              className="content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="button-row"
+  >
+    <div
+      className="button-container"
+    >
+      <button
+        data-testid="surrender-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Surrender
+      </button>
+    </div>
+  </div>
+</div>
+`;

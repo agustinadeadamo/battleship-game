@@ -5,18 +5,16 @@ import React from 'react';
 import { render, fireEvent, within } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
-
-import { createMemoryHistory } from 'history'
-
-import TestRenderer from 'react-test-renderer';
-const { act } = TestRenderer;
-
+import {
+  describe, expect, it, beforeEach,
+} from '@jest/globals';
+import { createMemoryHistory } from 'history';
+import { act, create } from 'react-test-renderer';
 
 /**
  * @desc Store
  */
 import Store from '../../Config/Store';
-
 
 /**
  * @desc Component
@@ -24,7 +22,7 @@ import Store from '../../Config/Store';
 import GameScreen from './GameScreen';
 import StartScreen from '../StartScreen/StartScreen';
 
-describe('[GameScreen View]',() => {
+describe('[GameScreen View]', () => {
   let getByTestId;
   const history = createMemoryHistory();
 
@@ -47,6 +45,15 @@ describe('[GameScreen View]',() => {
     act(() => { fireEvent.change(input, { target: { value: 'text' } }); });
     // Fires onClick event start game button
     act(() => { fireEvent.click(startGameButton); });
+  });
+
+  it('Matchs snapshot', () => {
+    const startscreen = create(
+      <Provider store={Store}>
+        <GameScreen />
+      </Provider>,
+    );
+    expect(startscreen).toMatchSnapshot();
   });
 
   it('Tests if the grid was shown correctly in user grid', () => {
